@@ -1,0 +1,14 @@
+Nqueens without recursion
+Jessalyn Wang, jwang456
+
+--Description--
+This assignment is an implementation of a variation on the NQueens problem, where we are given an input board size and coordinates of some queens. Given the state of the board, with input size x and prelimanry queens y, this program tries to find a solution that plaves the remaining x - y queens on the board. If no solution is found, it writes 'No solution' otherwise, it writes the placement of each queen, in [col] [row] order. The solving of the program was implemented with stacks, where each stack stores the state of the board after some attempt at placing a queen. Once a placement is found, the program ends. Otherwise, it runs until the stack is empty (no solution).
+
+--Files--
+nqueens.cpp: the only file for this program
+Makefile: creates an executable, nqueens
+README: this file
+
+--Usage--
+On running make, an executable is made. The program takes commands from an input file where each line is a different board. The format of the input lines should go like so: [board size] [queen position]. Thus, if we have a board size of 11 and a queen placement at (9, 10) where 9 is row and 10 is column, a the line would look as such: 11 10 9. Aside, from an input file, the program takes writes any solutions (or lack thereof) into an output file. Thus, when running the executable the command line argument should look something like this: ./nqueens <input file> <output file>.
+
